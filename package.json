@@ -1,0 +1,26 @@
+{
+    "name": "revconf-talk",
+    "description": "My revconf talk",
+    "version": "0.0.1",
+    "repository": "git://github.com/revconf-talk",
+    "main": "index.js",
+    "engines": {
+        "node": ">=8"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "lint": "eslint . --ext .js"
+    },
+    "dependencies": {
+        "ejs": "2.5.5",
+        "hapi": "17.4.0",
+        "lodash": "^4.17.10",
+        "request": "^2.85.0",
+        "vision": "^5.3.2"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "eslint": "^4.19.1",
+        "eslint-config-cloudreach": "^1.0.0"
+    }
+}

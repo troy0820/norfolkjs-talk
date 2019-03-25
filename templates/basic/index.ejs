@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>See Click fix it for Hampton Roads</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css.map">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="https://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1>
+            <%= title %>
+        </h1>
+        <% const issues = message;
+             issues.map(function(_,i) { %>
+            <li>
+                <%= issues[i] %>
+            </li>
+            <li>Latitude:
+                <%= latLng.lat[i] %>
+            </li>
+            <li>Longitude:
+                <%= latLng.lng[i] %>
+            </li>
+            <li>Image:</li>
+            <li>
+                <% if(images[i] != null) { %>
+                    <img src="<%= images[i] %>">
+                    <% } else { %>
+                        <img src="https://mindd.org/wp-content/uploads/2016/05/blogpost-placeholder-100x100.png">
+                        <% } %>
+            </li>
+            <hr/>
+            <% }) %>
+
+    </div>
+
+    <%= year %>
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.map"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>
