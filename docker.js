@@ -3,7 +3,7 @@
 const docker = require('harbor-master');
 
 const client = docker.Client({
-    host: '35.227.106.215',
+    host: '<put ip in here>',
     port: '2376'
 });
 
